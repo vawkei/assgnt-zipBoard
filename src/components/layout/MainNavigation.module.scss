@@ -1,0 +1,43 @@
+.main-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: var(--heading-color);
+  }
+  .title-div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    h1{
+      color: var(--heading-color);
+      transition: color 0.3s ease;
+    }
+    
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  .active {
+    color:green ;
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+  .harmburger {
+    // display: none;
+  }
+}

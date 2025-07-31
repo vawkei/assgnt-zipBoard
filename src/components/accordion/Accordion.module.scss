@@ -1,0 +1,82 @@
+.accordion-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; //📒column layout naturally stacks content vertically, which is ideal for small screens,no need to "break" layouts📒
+
+  h2 {
+    color: var(--heading-color);
+     transition: color 0.2s ease;
+
+  }
+
+  .items-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column; //📒column layout naturally stacks content vertically, which is ideal for small screens,no need to "break" layouts📒
+    margin-top: 2rem;
+
+    .data-item {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .data-content {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 0.5rem 0rem;
+      background-color: var(--card-color);
+      color: var(--text-color);
+      transition: background-color 0.1s ease, color 0.2s ease;
+
+      .left {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+    .accordion-content {
+      animation-name: slideDown;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+
+      // background-color: red;
+      // opacity: 0;
+
+      .slide-down {
+        animation-name: slideDown;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+      }
+      .slide-up {
+        animation-name: slideUp;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes slideUp {
+    from {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+  }
+}
