@@ -1,7 +1,19 @@
-.home-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  min-width: 23rem;
 
+  h2 {
+    animation-name: slideIn;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideIn {
+    from{transform:translateX(-400px) }
+    to{transform:translateX(0px) }
+}
 }

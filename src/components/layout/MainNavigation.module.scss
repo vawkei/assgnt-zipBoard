@@ -4,6 +4,7 @@
   justify-content: space-between;
   padding: 1rem 10%;
   width: 100%;
+  min-width: 23rem;
 
   a {
     text-decoration: none;
@@ -14,11 +15,10 @@
     align-items: center;
     gap: 1rem;
 
-    h1{
+    h1 {
       color: var(--heading-color);
       transition: color 0.3s ease;
     }
-    
   }
   nav ul {
     display: flex;
@@ -32,7 +32,7 @@
     }
   }
   .active {
-    color:green ;
+    color: green;
     background-color: yellow;
     padding: 0.5rem;
     border-radius: 6px;
