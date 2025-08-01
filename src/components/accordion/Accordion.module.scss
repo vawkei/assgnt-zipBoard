@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column; //📒column layout naturally stacks content vertically, which is ideal for small screens,no need to "break" layouts📒
+  
+  width:100%
 
   h2 {
     color: var(--heading-color);
@@ -19,6 +21,7 @@
     .data-item {
       padding: 1rem;
       margin: 1rem 0;
+      max-width:650px;
     }
 
     .data-content {
@@ -36,28 +39,25 @@
       }
     }
     .accordion-content {
-      animation-name: slideDown;
-      animation-duration: 3s;
-      animation-delay: 0s;
-      animation-fill-mode: forwards;
+      overflow: hidden;
+      padding: 0.5rem 1rem;
+      background-color: var(--card-color);
+      color: var(--text-color);      
+    }
+  }
 
-      // background-color: red;
-      // opacity: 0;
-
-      .slide-down {
+  .slide-down {
         animation-name: slideDown;
-        animation-duration: 3s;
+        animation-duration: 1s;
         animation-delay: 0s;
         animation-fill-mode: forwards;
       }
       .slide-up {
         animation-name: slideUp;
-        animation-duration: 3s;
+        animation-duration: 0.5s;
         animation-delay: 0s;
         animation-fill-mode: forwards;
       }
-    }
-  }
 
   @keyframes slideDown {
     from {

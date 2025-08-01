@@ -25,11 +25,11 @@ export const ResponseData = [
     },
      {
         id: 'Q2',
-        response: "Reactjs Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta mun2."
+        response: "Reactjs Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta We used to sit down there and write codes everyday until lord knows when mun2."
     },
      {
         id: 'Q3',
-        response: "Nextjs Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi odit cor.3."
+        response: "Nextjs Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi odit cor we may go there tomorrow if he comes but for now lets just staty at home and pray and code. anything is possible if you put your mind to it.3."
     },
      {
         id: 'Q4',
