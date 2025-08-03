@@ -14,9 +14,20 @@ function App() {
     setTheme((currentState)=>currentState==="light"?"dark":"light")
   };
 
+
   useEffect(()=>{
-    document.body.className = theme
+    const savedThemee= localStorage.getItem("theme");
+    if(savedThemee){
+      setTheme(savedThemee)
+    }
+  },[]);
+
+  useEffect(()=>{
+    document.body.className = theme;
+    localStorage.setItem("theme",theme);
   },[theme]);
+
+
 
   return (
     <Layout toggleTheme={toggleTheme} theme={theme}>
