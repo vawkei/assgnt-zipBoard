@@ -5,9 +5,27 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+
+    <script>
+      // Persist and apply theme BEFORE React renders, to prevent flash
+      (function () {
+        const theme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", theme);
+        //fallback background color to prevent white flash
+        document.write(
+          `<style>
+            body { 
+              background-color: ${theme === "dark" ? "#1e1e1e" : "#ffffff"};
+              color: ${theme === "dark" ? "#f1f1f1" : "#111111"};
+            }
+          </style>`
+        );
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+

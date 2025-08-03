@@ -14,18 +14,31 @@ function App() {
     setTheme((currentState)=>currentState==="light"?"dark":"light")
   };
 
+/*📒👇 Had to rework it due to the flashings upon refresh previous code 📒👇*/
+  // useEffect(()=>{
+  //   const savedThemee= localStorage.getItem("theme");
+  //   if(savedThemee){
+  //     setTheme(savedThemee)
+  //   }
+  // },[]);
 
-  useEffect(()=>{
-    const savedThemee= localStorage.getItem("theme");
-    if(savedThemee){
-      setTheme(savedThemee)
-    }
-  },[]);
+  // useEffect(()=>{
+  //   document.body.className = theme;
+  //   localStorage.setItem("theme",theme);
+  // },[theme]);
+/*📒 Had to rework it due to the flashings upon refresh previous code 📒*/
 
-  useEffect(()=>{
-    document.body.className = theme;
-    localStorage.setItem("theme",theme);
-  },[theme]);
+  useEffect(() => {
+  const savedTheme = localStorage.getItem("theme") || "light";
+  setTheme(savedTheme);
+  document.documentElement.setAttribute("data-theme", savedTheme);
+}, []);
+
+useEffect(() => {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("theme", theme);
+}, [theme]);
+
 
 
 
